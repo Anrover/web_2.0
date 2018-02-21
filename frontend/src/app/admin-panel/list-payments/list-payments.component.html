@@ -1,0 +1,43 @@
+<form name="form" (ngSubmit)="applyData()" #f="ngForm">
+    <div class="form-group">
+        <label for="sortfield">Выберите поле для сортировки</label>
+        <select class="form-control" id="sortfield" name="sortfield"
+         [(ngModel)]="model.sortfield" #sortfield="ngModel">
+            <option *ngFor="let opt of data.header">{{opt}}</option>
+          </select>
+    </div>
+    <div class="form-group">
+        <label for="searchfield">Выберите поле для поиска</label>
+        <select class="form-control" id="searchfield" name="searchfield"
+         [(ngModel)]="model.searchfield" #searchfield="ngModel">
+          <option>------</option>
+          <option *ngFor="let opt of data.header">{{opt}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="comment">Введите комментарий</label>
+        <input type="comment" class="form-control" name="comment" [(ngModel)]="model.comment"
+          #comment="ngModel"/>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Применить</button>
+    </div>
+</form>
+  
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let opt of data.header">{{opt}}</th>
+      <th>Безопасность</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngStyle]="{'background-color': entry[entry.length-1]? 'red' : 'white'}"
+     *ngFor="let entry of data.entries">
+      <td *ngFor="let item of entry | slice:0:-1">{{item}}</td>
+      <td>
+        <button class="btn" (click)="changeSafe(entry)">Изменить</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

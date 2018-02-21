@@ -1,0 +1,8 @@
+app-any-bank-payment, app-self-bank-payment{
+  border: 3px solid white;
+  border-bottom-color: lightgrey;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}

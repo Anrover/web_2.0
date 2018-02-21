@@ -1,0 +1,21 @@
+app-user{
+  border: 3px solid white;
+  border-bottom-color: lightgrey;
+  font-size: 20px;
+  padding-bottom: 10px;
+  /*overflow: hidden;*/
+}
+app-action-data {
+  border: 3px solid white;
+  border-bottom-color: lightgrey;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+app-footer {
+  position: absolute;
+  padding-left: 50px;
+  left: 0;
+  bottom: 30px;
+}

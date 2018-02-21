@@ -1,0 +1,86 @@
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+.footer {
+  position: absolute;
+  padding-left: 50px;
+  left: 0;
+  bottom: 30px;
+  /*width: calc(100% - 50px);*/
+}
+
+/*social-icons*/
+.twitter, .vkontakte, .instagram, .facebook, .gmail {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.vkontakte img:hover{
+  margin: 0 0 0 -50px;
+  cursor: pointer;
+}
+
+.twitter img {
+  margin: -50px 0 0 0;
+}
+
+.twitter img:hover{
+  margin: -50px 0 0 -50px;
+  cursor: pointer;
+}
+
+.instagram img {
+  margin: -100px 0 0 0;
+}
+
+.instagram img:hover{
+  margin: -100px 0 0 -50px;
+  cursor: pointer;
+}
+
+.gmail img {
+  margin: -200px 0 0 0;
+}
+
+.gmail img:hover{
+  margin: -200px 0 0 -50px;
+  cursor: pointer;
+}
+
+.facebook img {
+  margin: -150px 0 0 0;
+}
+
+.facebook img:hover{
+  margin: -150px 0 0 -50px;
+  cursor: pointer;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+@media screen and (max-width: 500px){
+  .footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    /* margin: 0; */
+    text-align: center;
+  }
+
+  /* .inline-block{
+		display: block;
+	} */
+}

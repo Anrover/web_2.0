@@ -1,0 +1,47 @@
+<form class="row form-horizontal" [formGroup]="signupForm2" (ngSubmit)="onSubmit()" #f="ngForm">
+  <!--<div class="pay-from-bank-data form-group">-->
+  <div class="text-field-prompt">Сформируйте платежку и загрузите её в свой банк для подписи</div>
+  <div class="form-group">
+    <div class="text-field-bank-data col-sm-3">От кого</div>
+    <div class="col-sm-6">
+      <input (keypress)="onlyNumberKey($event)" type="text" formControlName="payer"
+             placeholder="ИНН или название плательщика" class="input-field-bank-data form-control" maxlength="12">
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="text-field-bank-data col-sm-3">БИК</div>
+    <div class="col-sm-6">
+      <input (keypress)="onlyNumberKey($event)" type="text" formControlName="bik" placeholder=""
+             class="input-field-bank-data form-control" maxlength="9">
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="text-field-bank-data col-sm-3">Номер счета</div>
+    <div class="col-sm-6">
+      <input (keypress)="onlyNumberKey($event)" type="text" formControlName="num_account"
+             placeholder="" class="input-field-bank-data form-control" maxlength="20">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="text-field-bank-data col-sm-3">За что</div>
+    <div class="nds-block col-sm-6">
+      <input type="text" formControlName="nds" placeholder="Без НДС" class="input-field-nds form-control"
+          name="NDS" readonly [ngModel]="NDSPrint">
+      <div>
+        <div class="button-nds" (click)="chooseNDS($event, '18')">НДС 18%</div>
+        <div class="button-nds" (click)="chooseNDS($event, '10')">НДС 10%</div>
+        <div class="button-nds ndsActive" (click)="chooseNDS($event, '0')">Без НДС</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="text-field-bank-data col-sm-3">Сколько</div>
+    <div class="col-sm-6">
+      <input (keypress)="onlyNumberKey($event)" type="text" formControlName="sum_pay" placeholder=""
+             class="input-field-summpay form-control" maxlength="5">
+    </div>
+  </div>
+  <button class="button-send-bankpay" [disabled]="!f.valid">Получить файл для интернет банка</button>
+  <div class="button-clear-form"><a href="#" (click)="clearInputs($event)">Очистить форму</a></div>
+  <!--</div>-->
+</form>

@@ -1,0 +1,17 @@
+<div class="row">
+  <a routerLink="/login">Выход</a>
+  <ul class="nav nav-pills col-sm-12  col-sm-offset-2">
+      <li class="active col-sm-4"><a href="#list-payments" data-toggle="pill">
+        Cписок платежей по картам</a></li>
+      <li class="col-sm-4"><a href="#list-req-payments" data-toggle="pill">
+        Список запрошенных платежей</a></li>
+  </ul>
+</div>
+<div class="tab-content">
+    <app-list-payments id="list-payments" class="tab-pane fade in active col-sm-12">
+      Загрузка...
+    </app-list-payments>
+    <app-list-req-payments id="list-req-payments" class="tab-pane fade col-sm-12">
+      Загрузка...
+    </app-list-req-payments>
+</div>

@@ -1,0 +1,33 @@
+.button-choice-action{
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 60px;
+  margin-bottom: 5px;
+}
+
+.center{
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .button-choice-action{
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button-choice-action{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .button-choice-action{
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
